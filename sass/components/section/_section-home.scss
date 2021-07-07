@@ -1,0 +1,81 @@
+.section-home {
+    @include flex-column;
+    align-items: flex-start;
+    padding: 17px 4%;
+    background-image: linear-gradient(#f99a1c, #ba7112);
+
+    @include tablet {
+        padding: 40px 5.859375%;
+    }
+
+    @include pc {
+        padding: 35px 12.5%;
+    }
+
+    .field-gambar {
+        @include flex-column;
+        width: 100%;
+        margin-bottom: 8px;
+
+        @include tablet {
+            margin-bottom: 24px;
+        }
+
+        @include pc {
+            margin-bottom: 19px;
+        }
+
+        img {
+            width: 94.20289855072464%;
+
+            @include tablet {
+                width: 97.64011799410029%;
+            }
+
+            @include pc {
+                width: 100%;
+            }
+        }
+    }
+
+    .judul {
+        @include font1;
+        font-size: 32px;
+        margin-bottom: 8px;
+
+        @include tablet {
+            font-size: 42px;
+            margin-bottom: 21px;
+        }
+
+        @include pc {
+            font-size: 56px;
+            margin-bottom: 19px;
+        }
+    }
+
+    .flex-galeri {
+        @include flex-row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+
+        a {
+            width: 47.2463768115942%;
+            margin-bottom: 27px;
+
+            @include tablet {
+                width: 31.41592920353982%;
+                margin-bottom: 30px;
+            }
+
+            @include pc {
+                width: 22.5%;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

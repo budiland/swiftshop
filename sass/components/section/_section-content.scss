@@ -1,0 +1,138 @@
+.section-content {
+    @include flex-column;
+    align-items: flex-start;
+    padding: 17px 2.933333333333333%;
+    background-image: linear-gradient(#f99a1c, #ba7112);
+
+    @include tablet {
+        padding: 29px 0.78125%;
+    }
+
+    @include pc {
+        padding: 35px 2.604166666666667%;
+    }
+
+    .field-content {
+        width: 100%;
+        @include flex-column;
+
+
+
+        @include pc {
+            @include flex-row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .kiri {
+            @include flex-column;
+
+            @include pc {
+                width: 50%;
+            }
+
+            .gambar {
+                width: 100%;
+                margin-bottom: 7px;
+                align-self: center;
+
+                @include tablet {
+                    width: 92.72486772486772%;
+                    margin-bottom: 27px;
+                }
+
+                @include pc {
+                    width: 100%;
+                }
+            }
+
+            .judul {
+                @include font1;
+                font-style: italic;
+                margin-bottom: 17px;
+
+                @include tablet {
+                    font-size: 33px;
+                    margin: 0 3.571428571428571%;
+                    margin-bottom: 27px;
+                }
+            }
+
+            .field-button {
+                @include flex-row;
+                width: 100%;
+                justify-content: space-between;
+                margin-bottom: 15px;
+
+                @include tablet {
+                    justify-content: space-evenly;
+                    margin-bottom: 29px;
+                }
+
+                img {
+                    width: 47.02549575070822%;
+
+                    @include tablet {
+                        width: 33.06878306878307%;
+                    }
+                }
+            }
+        }
+
+        .kanan {
+            @include flex-column;
+
+            @include pc {
+                padding-top: 57px;
+                width: 50%;
+            }
+
+
+            .teks {
+                @include font2;
+                font-size: 19px;
+                margin-bottom: 24px;
+
+                @include tablet {
+                    font-size: 30px;
+                    margin: 0 3.571428571428571%;
+                    margin-bottom: 51px;
+                }
+
+                @include pc {
+                    font-size: 39px;
+                }
+            }
+        }
+    }
+
+
+    .field-tombol {
+        @include flex-column;
+        width: 100%;
+
+        @include tablet {
+            @include flex-row;
+            justify-content: space-between;
+        }
+
+        a {
+            width: 73.37110481586402%;
+            align-self: center;
+            margin-bottom: 11px;
+
+            @include tablet {
+                width: 48.41269841269841%;
+                margin-bottom: 0;
+            }
+
+            @include pc {
+                width: 48.62637362637363%;
+            }
+
+            .gambar-tombol {
+                width: 100%;
+            }
+        }
+    }
+}

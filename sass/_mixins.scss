@@ -1,0 +1,167 @@
+@mixin mobilebig {
+    @media screen and (min-width:#{$mobilebig}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width:#{$tablet}) {
+        @content;
+    }
+}
+
+@mixin pc {
+    @media screen and (min-width:#{$pc}) {
+        @content;
+    }
+}
+
+@mixin pcbig {
+    @media screen and (min-width:#{$pcbig}) {
+        @content;
+    }
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin font1 {
+    font-family: 'Poppins',
+        sans-serif;
+}
+
+@mixin font2 {
+    font-family: 'Open Sans',
+        sans-serif;
+}
+
+@mixin isicarouselheader {
+    position: absolute;
+    @include flex-column();
+    transition: $transition-slow;
+    width: 80%;
+
+    @include tablet {
+        width: 25em;
+        padding: 1em;
+    }
+
+    .logo {
+        width: 100%;
+        max-width: 116px;
+        margin-bottom: 11px;
+
+        @include tablet {
+            margin-bottom: 2em;
+            max-width: 165px;
+        }
+    }
+
+    .teks {
+        @include font2;
+
+        font: {
+            size: 12px;
+            align: center;
+        }
+
+        color: black;
+        margin-bottom: 2em;
+        z-index: 2;
+
+        @include pc {
+            font: {
+                size: 1em;
+            }
+        }
+    }
+
+    .container-button {
+        @include flex-column;
+
+        @include tablet {
+            @include flex-row;
+        }
+
+        .button {
+            z-index: 2;
+            padding: 14px 20px 16px 19px;
+            border-radius: 40px;
+            border: rgba(112, 112, 112, 1) solid 2px;
+            color: black;
+            margin-bottom: 1em;
+            @include font2;
+            font-size: 11px;
+
+            @include pc {
+                margin-bottom: 0;
+                margin-right: 1em;
+
+            }
+
+            &:nth-child(2n) {
+                border: white 1px solid;
+                color: grey;
+                background-color: rgb(67, 67, 67);
+            }
+        }
+
+
+    }
+}
+
+@mixin button {
+    color: black;
+    padding: 8px 12.85px;
+    // padding: 14px 20px 16px 19px;
+    transition: $transition-slow;
+    font-size: 10px;
+
+    border: 2px rgba(112, 112, 112, 1) solid {
+        radius: 40px;
+    }
+
+    @include tablet {
+        padding: 1em 2em;
+        font-size: 11px;
+    }
+
+    &:hover {
+        background-color: color(white-darkest);
+        color: color(white-light);
+    }
+}
+
+@mixin judul {
+    @include font1;
+
+    font: {
+        size: 18px;
+    }
+
+    color: black;
+
+    transition: $transition-slower;
+
+    @include tablet {
+        font-size: 2.25em;
+    }
+}
+
+@mixin fullposition {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

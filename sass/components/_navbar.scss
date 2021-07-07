@@ -1,0 +1,93 @@
+.navbar {
+    @include flex-row;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+    // background-color: red;
+    height: 59px;
+    box-shadow: 3px 2px 5px black;
+
+    @include pc {
+        height: 115px;
+        padding: 30px 12.5%;
+    }
+
+    .kiri {
+        @include flex-row;
+        justify-content: space-between;
+
+        .field-teks {
+            @include flex-column;
+            align-items: flex-start;
+
+            @include tablet {
+                @include flex-row;
+            }
+
+            .judul {
+                @include flex-row;
+
+                @include tablet {
+                    margin-right: 5px;
+                }
+
+                @include pc {
+                    margin-right: 42px;
+                }
+
+                .teks1,
+                .teks2 {
+                    @include font1;
+                    font-size: 25px;
+                    font-weight: bold;
+
+                    @include tablet {
+                        font-size: 38px;
+                    }
+
+                    @include pc {
+                        font-size: 63px;
+                    }
+                }
+
+                .teks1 {
+                    margin-right: 4px;
+                    color: #6762FE;
+                }
+
+                .teks2 {
+                    color: #FFA939;
+                }
+            }
+
+            .teks {
+                @include font2;
+                font-style: italic;
+                font-size: 15px;
+                margin-bottom: 5px;
+
+                @include tablet {
+                    font-size: 33px;
+                }
+
+                @include pc {
+                    font-size: 56px;
+                }
+            }
+        }
+    }
+
+    .kanan {
+        img {
+            width: 23px;
+
+            @include tablet {
+                width: 41px;
+            }
+
+            @include pc {
+                width: 66px;
+            }
+        }
+    }
+}

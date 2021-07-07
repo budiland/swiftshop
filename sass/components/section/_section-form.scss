@@ -1,0 +1,188 @@
+.section-form {
+    @include flex-row;
+    align-items: flex-start;
+    padding: 17px 4%;
+    background-image: linear-gradient(#fda838, #e08a18);
+
+    @include tablet {
+        padding: 71px 11.328125%;
+    }
+
+    .field-form {
+        @include flex-row;
+        justify-content: space-between;
+        border-radius: 43px;
+        width: 100%;
+        padding: 42px 4.347826086956522%;
+        background-color: white;
+        position: relative;
+
+        @include tablet {
+            padding: 54px 7.912457912457912%;
+        }
+
+        @include pc {
+            align-items: flex-start;
+        }
+
+        .kiri {
+            @include flex-column;
+            align-items: flex-start;
+
+            @include pc {
+                width: 48%;
+            }
+
+            form {
+                width: 100%;
+
+                label {
+                    @include font2;
+                    font-size: 24px;
+                    margin: 4px;
+
+                    @include tablet {
+                        font-size: 32px;
+                    }
+
+                    @include pc {
+                        font-size: 39px;
+                    }
+                }
+
+                input[type='text'] {
+                    @include font2;
+                    width: 100%;
+                    margin-bottom: 39px;
+                    padding: 12px;
+                    font-size: 16px;
+
+                    @include tablet {
+                        margin-top: 20px;
+                        margin-bottom: 66px;
+                        font-size: 28px;
+                        padding: 18.5px;
+                    }
+
+                    @include pc {
+                        margin-bottom: 80px;
+                        margin-top: 30px;
+                        font-size: 39px;
+                        padding: 19px;
+                    }
+                }
+
+                input[type='submit'] {
+                    @include font2;
+                    width: 100%;
+                    border-radius: 38px;
+                    background-color: #6762FE;
+                    padding: 25px 43px;
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: white;
+                    cursor: pointer;
+
+                    @include tablet {
+                        padding: 42px 73px;
+                        font-size: 42px;
+                    }
+                }
+            }
+
+
+        }
+
+        .kanan {
+            @include flex-column;
+            position: absolute;
+            background-color: white;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 43px;
+            visibility: hidden;
+
+            @include pc {
+                position: static;
+                visibility: visible;
+                border-radius: 0;
+                background-color: transparent;
+                width: 48%;
+            }
+
+            .atas {
+                @include flex-column;
+                width: 100%;
+
+                @include tablet {
+                    margin-bottom: 90px;
+                }
+
+                @include pc {
+                    margin-bottom: 245px;
+                }
+
+                .gambar {
+                    width: 65.42666666666667%;
+                }
+
+                canvas {
+                    max-width: 375px;
+
+                    @include tablet {
+                        max-width: 768px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .teks {
+                    @include font1;
+                    font-size: 16px;
+                    margin-bottom: 8px;
+                    color: #6762FE;
+
+                    @include tablet {
+                        font-size: 20px;
+                    }
+
+                    @include pc {
+                        font-size: 27px;
+                    }
+                }
+            }
+
+            .bawah {
+                @include flex-row;
+                width: 84%;
+                justify-content: space-between;
+
+                a {
+                    color: white;
+                    padding: 8px 18px;
+                    border-radius: 20px;
+
+                    @include tablet {
+                        padding: 8px 18px;
+                        border-radius: 20px;
+                    }
+
+                    @include pc {
+                        padding: 16px 26px;
+                        border-radius: 33px;
+                    }
+
+                    &.button-red {
+                        background-color: #CE5C5C;
+                    }
+
+                    &.button-green {
+                        background-color: #5CCE64;
+                    }
+                }
+            }
+        }
+    }
+
+}

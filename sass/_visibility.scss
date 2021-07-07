@@ -1,0 +1,7 @@
+.mobile.sembunyikan {
+    display: none;
+
+    @include tablet {
+        display: flex;
+    }
+}
